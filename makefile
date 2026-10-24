@@ -1,8 +1,11 @@
-students: address.o date.o main.o
-	g++ -g address.o date.o main.o -o students
+students: address.o date.o student.o main.o
+	g++ -g address.o date.o student.o main.o -o students
 
-main.o: address.h date.h main.cpp
+main.o: address.h date.h student.h main.cpp
 	g++ -c -g main.cpp
+
+student.o: address.h date.h student.h main.cpp
+	g++ -c -g student.cpp
 
 address.o: address.h address.cpp
 	g++ -c -g address.cpp

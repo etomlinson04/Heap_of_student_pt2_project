@@ -3,7 +3,7 @@
 ## Progress
  - I designed the UML for all classes (Address, Date, Student).
  - I also made and tested Address and Date.
- - Student is designed in my UML but will be implemented next week.
+ - Part 2: I implemented Student with all the required elements (heap allocated, Address, and Date, and Menu application).
 
 ## UML
 
@@ -64,6 +64,12 @@ Each class also has a constructor with no parameters and an `init()` method. I m
  3. finally converts each string to an int using the string stream.
 
 **Date::printDate()** prints the month name, the day, a comma, and year, like `January 27, 1997`.
+
+**Student~Student()** deletes the address and both dates.
+
+**loadStudents(vector):** opens student.csv, for each non-empty line like new Student(), init(line), and `push_back`, then closes the file.
+
+**delStudents(vecto):** for each pointer, delete it, then clear the vector.
 
 ## Build / Run
 

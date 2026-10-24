@@ -9,17 +9,19 @@ class Student {
 private:
   std::string firstName;
   std::string lastName;
-  Address address;
-  Date birthdate;
-  Date gradDate;
+  Address* address;
+  Date* birthdate;
+  Date* gradDate;
   int creditHours;
 
 
 public:
   Student();
+  ~Student();
   void init(std::string csvLine);
   void printStudent() const;
   std::string getLastFirst() const;
+  std::string getLastName() const;
 };
 
 
